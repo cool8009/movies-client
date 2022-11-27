@@ -1,9 +1,8 @@
 import React from 'react'
-import { useEffect, useState } from "react"
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-
+//Search bar component
 const SearchComponent = ({ sendSearch }) => {
 
     const onSearchSubmit = (e) => {

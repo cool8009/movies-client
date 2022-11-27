@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
 
+//Handles and renders pagination
 const Pagination = ({ moviesPerPage, setMoviesPerPage, totalMovies, paginate}) => {
     const pageNumbers = [];
     //fill page numbers dynamically based on amount of content presented

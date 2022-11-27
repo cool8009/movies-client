@@ -4,11 +4,11 @@ import React from 'react'
 import MoviesComponent from "../components/MoviesComponent";
 import Pagination from "../components/Pagination";
 import Button from 'react-bootstrap/Button';
-
 import SearchComponent from "../components/SearchComponent";
 
 
-
+//Main Movies View. Handles all movies related logic and state.
+//Dynamically displays the movies based on API call (search results or popular movies, easy to expand)
 const MoviesView = () => {
     const [popularMovies, setPopularMovies] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -37,7 +37,7 @@ const MoviesView = () => {
         setShowSearchResults(true);
       }
 
-      // Get Current Movies
+      // Get Current Movies Index
       const indexOfLastMovie = currentPage * moviesPerPage;
       const indexOfFirstMovie = indexOfLastMovie - moviesPerPage;
       const currentMovies = (movies) => movies.slice(indexOfFirstMovie, indexOfLastMovie); 

@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import { FaStar } from 'react-icons/fa';
 
-
-
+//Modal component which shows extra info when clicking on a movie card
 const MovieModalComponent = ({ show, handleClose, movie  }) => {
   return (
     <>
