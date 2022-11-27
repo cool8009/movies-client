@@ -9,7 +9,7 @@ const SearchComponent = ({ sendSearch }) => {
     const onSearchSubmit = (e) => {
         e.preventDefault()
         let { searchtext } = e.target.elements;
-        if (!searchtext) {
+        if (searchtext.value === '') {
           alert('Please insert search query')
           return
         }

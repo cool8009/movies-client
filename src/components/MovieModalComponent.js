@@ -23,7 +23,8 @@ const MovieModalComponent = ({ show, handleClose, movie  }) => {
                 </div>
                 <div style={{marginLeft: '30px'}}> 
                     <p> {movie.overview} </p>
-                    <p><b>Genre: {movie.genreNames[0]}</b>  </p>
+                    <p><b>Genre: {movie.genreNames !== null ? movie.genreNames[0] : 'Unknown'}</b>  </p>
+                    <p><b>Release Date: {movie.release_date !== null ? movie.release_date : 'Unknown'}</b>  </p>
                     <div>
                         <p> <FaStar/> {movie.vote_average} by {movie.vote_count} users. </p>
                         <p> Current popularity rating: { movie.popularity }</p>

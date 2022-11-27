@@ -29,21 +29,27 @@ const Pagination = ({ moviesPerPage, setMoviesPerPage, totalMovies, paginate}) =
                         Set Movies Per Page:
                     </p>
                 </li>
-                <li className="page-item">
-                    <Button onClick={() => setMoviesPerPage(5)} className="page-link">
-                        5
-                    </Button>
-                </li>
-                <li className="page-item">
-                    <Button onClick={() => setMoviesPerPage(10)} className="page-link">
-                        10
-                    </Button>
-                </li>
-                <li className="page-item">
-                    <Button onClick={() => setMoviesPerPage(20)} className="page-link">
-                        20
-                    </Button>
-                </li>
+                { totalMovies >= 5 && 
+                    (<li className="page-item">
+                        <Button onClick={() => setMoviesPerPage(5)} className="page-link">
+                            5
+                        </Button>
+                    </li>)
+                }
+                { totalMovies >= 10 && 
+                    (<li className="page-item">
+                        <Button onClick={() => setMoviesPerPage(10)} className="page-link">
+                            10
+                        </Button>
+                    </li>)
+                }
+                { totalMovies >= 20 && 
+                    (<li className="page-item">
+                        <Button onClick={() => setMoviesPerPage(20)} className="page-link">
+                            20
+                        </Button>
+                    </li>)
+                }
             
         </ul>
       </nav>

@@ -54,21 +54,21 @@ const MoviesView = () => {
                 (<h1 marginTop="30px">Current Popular Movies:</h1>) :
                 (
                     <div>
-                        <h1 marginTop="30px">Search Results:</h1>
+                        { searchResults.length > 0 ? <h1 marginTop="30px">Search Results:</h1> : <h1>No Movies For The Search Were Found.</h1>}
                         <Button onClick={() => setShowSearchResults(false)}>Back To Popular Movies</Button>
                     </div>
                 )
-                }
+            }
             <MoviesComponent 
                 movies={!showSearchResults ? currentMovies(popularMovies) : currentMovies(searchResults)} 
                 loading={loading}
             />
-            <Pagination 
+            {  <Pagination 
                 moviesPerPage={moviesPerPage} 
                 setMoviesPerPage={setMoviesPerPage}
                 totalMovies={!showSearchResults ? popularMovies.length : searchResults.length}
                 paginate={paginate}
-            />
+            />}
         </div>
     )
 }
